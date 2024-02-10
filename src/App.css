@@ -1,3 +1,9 @@
-.bg-red{
-   text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap');
+
+.dancing-script {
+   font-family: 'Dancing Script', cursive;
+ }
+.Nav-Sec{font-family: 'Protest Strike', sans-serif;}
+ 
