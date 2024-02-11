@@ -1,9 +1,12 @@
-import React from 'react'
-import './App.css'
+import React from "react";
+import "./App.css";
+import Hero from "./Components/Hero";
 function App() {
   return (
-    <div className="bg-red">App</div>
-  )
+    <div className="bg-red">
+      <Hero />
+    </div>
+  );
 }
 
-export default App
+export default App;

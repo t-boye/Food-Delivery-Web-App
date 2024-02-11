@@ -98,18 +98,18 @@ function Navigation() {
             placeholder="Search restaurants or dishes"
             className="border border-gray-300 rounded-md p-2 pl-10 w-64 focus:border-indigo-500 focus:ring-indigo-500 focus:ring-opacity-50"
           />
-          <button className="ml-4 bg-blue-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-md">
+          <button className="ml-4 bg-[#d44646] hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-md">
             Search
           </button>
         </div>
 
         {/* Sign In and Sign Out */}
         <div className="sign-container hidden md:block">
-        <a href="/sign-in" className="border bg-blue-500 border-blue-300 rounded-md p-2 pl-5 w-64 focus:border-indigo-500
+        <a href="/sign-in" className="border bg-[#d44646] border-blue-300 rounded-md p-2 pl-5 w-64 focus:border-indigo-500
         hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-opacity-50">Sign In</a>
         <a href="/sign-out" className="border border-blue-300 rounded-md p-2 pl-5 w-64 
         hover:border-bg-indigo-700
-        focus:border-blue-500 focus:ring-blue-500 focus:ring-opacity-50">Sign Up</a>
+        focus:border-[#d44646] focus:ring-[#d44646] focus:ring-opacity-50">Sign Up</a>
       </div>
       </div>
     </nav>
