@@ -1,12 +1,23 @@
 import React from "react";
+import { motion } from 'framer-motion';
 import Food from "../assets/Images/Burger.png";
 
 const Hero = () => {
+
+     //  animation variants for the image
+  const imageVariants = {
+   hover: {
+     scale: 1.1,
+     opacity: 0.9,
+     transition: { duration: 0.3 },
+   },
+ };
+
   return (
     <div className="Hero-section px-[2%] pt-12 h-screen w-full bg-cover bg-center bg-no-repeat">
       <div className="flex items-center justify-between border-[5px] h-[90vh] border-white rounded-2xl">
         {/* left container*/}
-        <div className="text-white w-1/2 px-[3%] ">
+        <div className="left-container text-white w-1/2 px-[3%] ">
           <div className="dancing-script text-6xl">
             <h1 className="">We Provide</h1>
             <h1 className="my-3">delivery Within</h1>
@@ -28,10 +39,16 @@ const Hero = () => {
             </a>
           </div>
         </div>
-        {/* right container*/}
 
+        {/* right container / Image Container */}
         <div className="w-1/2">
-          <img className="" src={Food} width={600} />
+          <motion.img
+            className=""
+            src={Food}
+            width={600}
+            variants={imageVariants}
+            whileHover="hover"
+          />
         </div>
       </div>
     </div>

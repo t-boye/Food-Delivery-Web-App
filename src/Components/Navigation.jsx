@@ -7,7 +7,7 @@ function Navigation() {
 
   const userLinks = [
     { name: 'Settings', link: '/settings' },
-    { name: 'Logout', link: '/logout' }
+    { name: 'Sign-out', link: '/Signout' }
   ]
 
   return (
@@ -80,16 +80,27 @@ function Navigation() {
               )}
             </svg>
           </button>
-          <ul
-            className={`absolute top-0 left-0 mt-2 w-48 bg-white border border-gray-300 rounded-md shadow-md ${toggle ? 'block' : 'hidden'}`}
-          >
-            {userLinks.map((link) => (
-              <li key={link.name} className="px-4 py-2 text-gray-700 hover:bg-gray-200">
-                <a href={link.link}>{link.name}</a>
-              </li>
-            ))}
-          </ul>
-        </div>
+          <ul className={`absolute top-0 left-0 mt-2 w-48 bg-white border border-gray-30 rounded-md shadow-md ${toggle ? 'block' : 'hidden'}`}>
+      <ul className="">
+      <li className="px-4 py-2 text-gray-700 hover:bg-gray-200">
+        <a href="/home" >Home</a>
+      </li>
+      <li className="px-4 py-2 text-gray-700 hover:bg-gray-200">
+        <a href="/about" >About</a>
+      </li>
+      <li className="px-4 py-2 text-gray-700 hover:bg-gray-200">
+        <a href="/services">Contact</a>
+      </li>
+   </ul>
+    
+    {/* Links from userLinks first */}
+    {userLinks.map((link) => (
+      <li key={link.name} className="px-4 py-2 text-gray-700 hover:bg-gray-200">
+        <a href={link.link}>{link.name}</a>
+      </li>
+    ))}
+  </ul>
+  </div>
 
         {/* Search Bar */}
         <div className="hidden md:flex items-center">
@@ -105,10 +116,11 @@ function Navigation() {
 
         {/* Sign In and Sign Out */}
         <div className="sign-container hidden md:block">
-        <a href="/sign-in" className="border bg-[#d44646] border-blue-300 rounded-md p-2 pl-5 w-64 focus:border-indigo-500
-        hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-opacity-50">Sign In</a>
+        <a href="/sign-in" className="border bg-[#d44646] border-blue-300 rounded-md p-2 pl-5 w-64 
+        focus:border-indigo-500
+        hover:bg-transparent cursor-pointer focus:ring-indigo-500 focus:ring-opacity-50">Sign In</a>
         <a href="/sign-out" className="border border-blue-300 rounded-md p-2 pl-5 w-64 
-        hover:border-bg-indigo-700
+        hover:bg-[#e63b3b]
         focus:border-[#d44646] focus:ring-[#d44646] focus:ring-opacity-50">Sign Up</a>
       </div>
       </div>

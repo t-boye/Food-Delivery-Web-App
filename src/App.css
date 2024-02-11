@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap');
 
 .dancing-script {
@@ -7,3 +6,44 @@
  }
 .Nav-Sec{font-family: 'Protest Strike', sans-serif;}
  
+
+@media only screen and (max-width: 768px) {
+  /* Hero-section: Adjust spacing and text alignment */
+  .Hero-section {
+    padding-top: 12px; /* Reduce default padding-top */
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Image container: Add subtle margin, change order, and increase size */
+  .order-1.md:order-1 {
+    margin-top: 22px;
+    padding-bottom: 50px;
+    order: 1;
+    max-width: 100%; 
+    height: auto;
+    width: 100%; 
+  }
+
+  /* Text container: Improve readability and spacing */
+  .order-2.md:order-2 {
+    padding: 4px 8px; 
+    justify-content: start; 
+  }
+
+  /* Text styles: Enhance clarity and size */
+  .dancing-script h1 {
+    line-height: 1.2; 
+    font-size: 2rem;
+    flex-direction: row;
+ 
+  }
+
+  /* Buttons: Optimize size and spacing */
+  .flex.items-center.gap-x-4 {
+    gap: 8px; 
+  }
+  .w-fit.px-12.py-2 {
+    padding: 8px 8px; /* Slightly reduce button size */
+  }
+}
