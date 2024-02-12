@@ -1,20 +1,19 @@
 import React from "react";
-import { motion } from 'framer-motion';
-import Food from "../assets/Images/Burger.png";
+import { motion } from "framer-motion";
+import Food from "../../assets/Images/Burger.png";
 
 const Hero = () => {
-
-     //  animation variants for the image
+  //  animation variants for the image
   const imageVariants = {
-   hover: {
-     scale: 1.1,
-     opacity: 0.9,
-     transition: { duration: 0.3 },
-   },
- };
+    hover: {
+      scale: 1.1,
+      opacity: 0.9,
+      transition: { duration: 0.3 },
+    },
+  };
 
   return (
-    <div className="Hero-section px-[2%] pt-12 h-screen w-full bg-cover bg-center bg-no-repeat">
+    <div className="Hero-section mt-16 px-[2%] pt-12 h-screen w-full bg-cover bg-center bg-no-repeat">
       <div className="flex items-center justify-between border-[5px] h-[90vh] border-white rounded-2xl">
         {/* left container*/}
         <div className="left-container text-white w-1/2 px-[3%] ">

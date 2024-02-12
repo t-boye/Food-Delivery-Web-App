@@ -1,10 +1,15 @@
 import React from "react";
 import "./App.css";
-import Hero from "./Components/Hero";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./Pages/Home";
 function App() {
   return (
     <div className="bg-red">
-      <Hero />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
