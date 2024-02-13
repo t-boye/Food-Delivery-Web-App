@@ -13,8 +13,8 @@ const Hero = () => {
   };
 
   return (
-    <div className="Hero-section mt-16 px-[2%] pt-12 h-screen w-full bg-cover bg-center bg-no-repeat">
-      <div className="flex items-center justify-between border-[5px] h-[90vh] border-white rounded-2xl">
+    <div className="Hero-section mt-16 pl-[13$]  h-screen w-full bg-cover bg-center bg-no-repeat">
+      <div className="flex items-center justify-between border-[3px] h-[80vh] border-white rounded-2xl">
         {/* left container*/}
         <div className="left-container text-white w-1/2 px-[3%] ">
           <div className="dancing-script text-6xl">
