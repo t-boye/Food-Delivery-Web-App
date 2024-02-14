@@ -17,7 +17,7 @@ function Navigation() {
         <div id="logo" className="dancing-script  font-bold text-3xl cursor-pointer text-white">My Food App</div>
 
         {/* Links */}
-        <div className="Nav-Sec hidden md:flex items-center space-x-4">
+        <div className="font-head hidden md:flex items-center space-x-4">
         <a href="/" className="hover:border-b-2 text-white hover:border-blue-500 font-bold text-xl">
           Home
         </a>
@@ -115,7 +115,7 @@ function Navigation() {
             placeholder="Search restaurants or dishes"
             className="border border-gray-300 rounded-md p-2 pl-10 w-64 focus:border-indigo-500 focus:ring-indigo-500 focus:ring-opacity-50"
           />
-          <button className="ml-4 bg-[#d44646] hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-md">
+          <button className="ml-4 bg-[#d44646] border-blue-300 border hover:bg-transparent text-white font-bold py-2 px-4 rounded-md">
             Search
           </button>
         </div>

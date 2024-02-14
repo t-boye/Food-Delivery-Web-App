@@ -8,7 +8,8 @@ body{
 .dancing-script {
    font-family: 'Dancing Script', cursive;
  }
-.Nav-Sec{font-family: 'Protest Strike', sans-serif;}
+.font-head{font-family: 'Protest Strike', sans-serif;}
+
 .slider-container .slick-track{
   display: flex;
   

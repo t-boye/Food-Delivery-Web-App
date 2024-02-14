@@ -1,18 +1,18 @@
 import React from "react";
-import Hero from "../Components/Home-Compunents/Hero";
-import DessertsCarousel from "../Components/Home-Compunents/DessertsCarousel";
-import FreshFood from "../Components/Home-Compunents/FreshFood";
-import WhyChoose from "../Components/Home-Compunents/WhyChoose";
-import OurMenu from "../Components/Home-Compunents/OurMenu";
+import Hero from "../Components/Home-Components/Hero";
+import FreshFood from "../Components/Home-Components/FreshFood";
+import Reviews from "../Components/Home-Components/Reviews";
+import WhyChoose from "../Components/Home-Components/WhyChoose";
+import OurMenu from "../Components/Home-Components/OurMenu";
 
 const Home = () => {
   return (
     <div>
       <Hero />
-      <DessertsCarousel />
       <FreshFood />
       <WhyChoose />
       <OurMenu />
+      <Reviews />
     </div>
   );
 };

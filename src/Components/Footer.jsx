@@ -13,7 +13,7 @@ const background = "linear-gradient(117deg, #0EB0AA 1.01%, #11474B 86.78%)";
 
 const Footer = () => {
   return (
-    <div className="border-t-2 relative  w-full mt-[20rem] ">
+    <div className="bg-gray-800 border-t-2  relative  w-full mt-[20rem] ">
       <div className=" px-[5%] w-full absolute top-[-290px] lg:top-[-170px]">
         <div className="flex flex-col py-12 gap-y-4 lg:gap-y-0 lg:py-0 lg:flex-row justify-between items-center lg:px-[13%]  lg:h-[230px] w-full rounded-lg bg-[#0EB0AA]">
           <div className="flex flex-col items-center justify-center gap-y-6 text-white">
@@ -23,7 +23,7 @@ const Footer = () => {
                 rotate: [0, 0, 270, 270, 0],
                 borderRadius: ["20%", "20%", "50%", "50%", "20%"],
               }}
-              className="flex justify-center items-center bg-[#11474B] w-[70px] h-[70px] rounded-full text-white text-[35px] cursor-pointer hover:text-[#0A66C2] "
+              className="flex justify-center items-center w-[70px] h-[70px] rounded-full text-white text-[35px] cursor-pointer hover:text-[#0A66C2] bg-[#d44646] "
             >
               <IoCall />
             </motion.span>
@@ -36,11 +36,11 @@ const Footer = () => {
                 rotate: [0, 0, 270, 270, 0],
                 borderRadius: ["20%", "20%", "50%", "50%", "20%"],
               }}
-              className="flex justify-center items-center bg-[#11474B] w-[70px] h-[70px] rounded-full text-white text-[35px] cursor-pointer hover:text-[#0A66C2] "
+              className="flex justify-center items-center  w-[70px] h-[70px] rounded-full text-white text-[35px] cursor-pointer hover:text-[#0A66C2] bg-[#d44646] "
             >
               <MdEmail />
             </motion.span>
-            <p className="">email@gami.com</p>
+            <p className="">email@hotmail.com</p>
           </div>
           <div className="flex flex-col items-center justify-center gap-y-6 text-white">
             <motion.span
@@ -49,12 +49,12 @@ const Footer = () => {
                 rotate: [0, 0, 270, 270, 0],
                 borderRadius: ["20%", "20%", "50%", "50%", "20%"],
               }}
-              className="flex justify-center items-center bg-[#11474B] w-[70px] h-[70px] rounded-full text-white text-[35px] cursor-pointer hover:text-[#0A66C2]"
+              className="flex justify-center items-center w-[70px] h-[70px] rounded-full text-white text-[35px] cursor-pointer hover:text-[#0A66C2] bg-[#d44646] "
             >
               <FaLocationDot />
             </motion.span>
             <p className="px-4 text-center">
-              5000 Thayer Center, STE C Oakland, MD 21550{" "}
+              Abeka - Accra{" "}
             </p>
           </div>
         </div>
@@ -123,7 +123,7 @@ const Footer = () => {
         </div>
         <div className="px-[5%] lg:px-0 justify- flex flex-wrap mt-12 lg:mt-0 lg:items-center gap-x-16">
           <div className="flex flex-col lg:items-center">
-            <h1 className="dancing-script text-[24px] font-medium mr-10 text-white pb-6 flex lg:justify-center">
+            <h1 className="font-head text-[24px] font-medium mr-10 text-white pb-6 flex lg:justify-centers">
               Quick Links
             </h1>
             <ul className="text-white flex flex-col justify-center gap-y-2 text-[16px] font-normal ">
@@ -143,8 +143,8 @@ const Footer = () => {
             </ul>
           </div>
           <div className="flex flex-col lg:items-center">
-            <h1 className="dancing-script text-[24px] font-medium mr-10 text-white pb-6 flex lg:justify-center">
-              OurMenu
+            <h1 className="font-head text-[24px] font-medium mr-10 text-white pb-6 flex lg:justify-center">
+              Our Menu
             </h1>
             <ul className="text-white flex flex-col justify-center gap-y-2 text-[16px] font-normal ">
               <li className="list-item pb-2 cursor-pointer hover:animate-pulse ">
@@ -162,8 +162,8 @@ const Footer = () => {
             </ul>
           </div>
           <div className="flex flex-col lg:items-center">
-            <h1 className="dancing-script text-[24px] font-medium mr-10 text-white pb-6 flex lg:justify-center">
-              ContactUs
+            <h1 className="font-head text-[24px] font-medium mr-10 text-white pb-6 flex lg:justify-center">
+              Contact Us
             </h1>
             <ul className="text-white flex flex-col justify-center gap-y-2 text-[16px] font-normal ">
               <li className="list-item pb-2 cursor-pointer hover:animate-pulse ">
@@ -173,10 +173,10 @@ const Footer = () => {
                 923331223215
               </li>
               <li className="list-item pb-2 cursor-pointer hover:animate-pulse">
-                https//facebook.com
+                myfoodapp@gmail.com
               </li>
               <li className="list-item pb-2 cursor-pointer hover:animate-pulse">
-                food@gmail.com
+                myfoodapp@gmail.com
               </li>
             </ul>
           </div>
@@ -186,7 +186,8 @@ const Footer = () => {
         style={{ background: background }}
         className="flex font-semibold justify-center w-full items-center py-2 border-t-2 border-white text-white  "
       >
-        <p className="">© 2024 Copyright Website name All Rights Reserved</p>
+        <p className="text-1xl">© 2024 Copyright
+        <span className="pl-4 pr-3 text-1xl dancing-script">My Food App</span>  All Rights Reserved</p>
       </div>
     </div>
   );
