@@ -1,5 +1,5 @@
 import React from "react";
-import MenuImg from "../../assets/Images/FreshFood.jpg";
+import MenuImg from "../../assets/Images/Fresh Fruits.jpg";
 import { motion } from "framer-motion";
 import { FaStar } from "react-icons/fa";
 
@@ -13,7 +13,7 @@ const MenuCard = () => {
   };
 
   return (
-    <div className="border-2 overflow-hidden flex flex-col pb-4 rounded-[30px] border-b-8 border-r-8 border-b-gray-700 border-r-gray-800">
+    <div className="border-2 overflow-hidden flex flex-col pb-4 w-[350px] rounded-[30px] border-b-8 border-r-8 border-b-gray-700 border-r-gray-800">
       <div className="h-[12rem]">
         <motion.img
           className="w-full h-full"

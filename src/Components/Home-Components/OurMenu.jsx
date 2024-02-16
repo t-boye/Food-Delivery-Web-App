@@ -1,14 +1,15 @@
 import React from "react";
 import MenuCard from "./MenuCard";
+
 const OurMenu = () => {
   return (
     <div className="">
       <h2 className="font-head text-center pt-10 text-5xl font-semibold pb-5 text-white">
         Explore Our Menu
       </h2>
-      <hr className="w-10 h-3 color-red items-center"/>
+      <hr className="w-10 h-3 color-red pl" />
 
-      <div className="grid grid-cols-3 gap-12  mt-12  pb-12 px-10">
+      <div className="flex flex-wrap justify-center gap-16 mt-12 pb-12 px-10">
         <MenuCard />
         <MenuCard />
         <MenuCard />
@@ -22,7 +23,6 @@ const OurMenu = () => {
         hover:bg-transparent cursor-pointer focus:ring-indigo-500 focus:ring-opacity-50 "
         >
           <span className="pl-8">View More</span>
-          
         </a>
       </div>
     </div>

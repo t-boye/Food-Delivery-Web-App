@@ -54,3 +54,102 @@ body{
     padding: 8px 8px; /* Slightly reduce button size */
   }
 }
+
+.coolinput {
+  width: fit-content;
+  position: static;
+  max-width: 240px;
+}
+.wider-input {
+  width: 400px; /* Replace with your desired width */
+}
+
+
+.coolinput > label.text {
+  font-size: 0.75rem;
+  /* display: inline; */
+  color: #818CF8;
+  font-weight: 700;
+  position: relative;
+  top: 0.5rem;
+  margin: 0 0 0 7px;
+  width: fit-content;
+}
+
+
+.coolinput input[type=text].input {
+  font-size: 0.75rem;
+  border: 2px #818CF8 solid;
+  border-radius: 5px;
+  padding: 11px 10px;
+
+}
+
+.coolinput input[type=text].input:focus {
+  outline: none;
+}
+  /* REVIEW SECTIO */
+.review-section{
+  margin: auto;
+  padding: 0 1rem;
+  max-width: 1100px;
+  text-align: center;
+}
+
+.title{
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: rgb(50, 50, 50);
+  margin-bottom: .5rem;
+}
+.note{
+  font-size: 1.1rem;
+  color: rgb(150, 150, 150);
+  font-style: italic;
+    color: red;
+}
+
+
+.review{
+  margin: 0 1rem;
+  min-width: 300px;
+  flex: 1;
+}
+
+.head-review{
+  margin: 1.75rem auto;
+  width: 150px;
+  height: 150px;
+}
+
+.rev_img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, .25);
+}
+
+.body-review{
+  background-color: rgb(238, 238, 238);
+  padding: 2.5rem;
+  box-shadow: 2px 2px 10px 3px rgb(225, 225, 225);
+}
+.name-review{
+  font-size: 1.5rem;
+  color: rgb(50, 50, 50);
+  margin-bottom: .25rem;
+}
+.place-review{
+  color: red;
+  font-style: italic;
+}
+.rating{
+  color: rgb(253, 180, 42);
+  margin: 1rem 0;
+}
+.desc-review{
+  line-height: 1.5rem;
+  letter-spacing: 1px;
+  color: rgb(150, 150, 150);
+}

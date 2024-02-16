@@ -72,9 +72,7 @@ const Footer = () => {
             My Food App
           </h1>
           <p className="w-[300px] text-[#cac7c7] py-5">
-            Whether you have a specific project in mind or you are seeking
-            guidance on the best solutions for your business, our team is ready
-            to assist.
+          our all-in-one solution for recipes, restaurant recommendations, and personalized dietary guidance. Whether you're a cooking enthusiast or looking for convenient dining options, our app has you covered.
           </p>
           <div className="flex items-center mt-1 text-xl gap-x-2">
             <motion.span
@@ -151,10 +149,10 @@ const Footer = () => {
                 Burger
               </li>
               <li className="list-item pb-2 cursor-pointer hover:animate-pulse">
-                Special Burger
+                Banku
               </li>
               <li className="list-item pb-2 cursor-pointer hover:animate-pulse">
-                Cheken
+                Chicken
               </li>
               <li className="list-item pb-2 cursor-pointer hover:animate-pulse">
                 Baryani
@@ -167,16 +165,16 @@ const Footer = () => {
             </h1>
             <ul className="text-white flex flex-col justify-center gap-y-2 text-[16px] font-normal ">
               <li className="list-item pb-2 cursor-pointer hover:animate-pulse ">
-                923331223215
+                +233 593 501 488
               </li>
               <li className="list-item pb-2 cursor-pointer hover:animate-pulse">
-                923331223215
-              </li>
-              <li className="list-item pb-2 cursor-pointer hover:animate-pulse">
-                myfoodapp@gmail.com
+                +233 506 465 843
               </li>
               <li className="list-item pb-2 cursor-pointer hover:animate-pulse">
                 myfoodapp@gmail.com
+              </li>
+              <li className="list-item pb-2 cursor-pointer hover:animate-pulse">
+                myfoodapp@hotmail.com
               </li>
             </ul>
           </div>

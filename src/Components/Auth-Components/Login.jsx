@@ -10,33 +10,34 @@ export default function Login() {
           {/* <!-- Left column container with background--> */}
           <div className="mb-12 md:mb-0 md:w-8/12 lg:w-6/12">
             <img
-              src="https://tecdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
-              className="w-full"
+              src="https://i.postimg.cc/sf0VjYB0/20213585795b1d232af28c9106038247.jpg"
+              className="w-full lg:pl-24 lg:h-135"
               alt="Phone image"
             />
           </div>
 
           {/* <!-- Right column container with form --> */}
           <div className="md:w-8/12 lg:ml-6 lg:w-5/12">
-            <h1 className="text-xl sm:text-4xl font-semibold  text-white pb-12">
-              Login...
+          <h1 className="font-head text-xl sm:text-5xl font-semibold text-center text-white pb-8">
+              Sign In
             </h1>
             <form>
               {/* <!-- Email input --> */}
-              <div className="flex flex-col w-full items-center gap-x-4">
+              <label htmlFor="Email" className="text-[#818CF8] pb-4">Email:</label>
                 <input
                   type="email"
-                  placeholder="Enter Email"
+                  placeholder=""
                   className="w-full mb-6 outline-none text-xl py-1 px-3 border-b-2 bg-transparent text-white"
                 />
 
                 {/* <!--Password input--> */}
+                <label htmlFor="Password" className="text-[#818CF8] pb-4">Password:</label>
                 <input
                   type="password"
-                  placeholder="Enter Password"
+                  placeholder=""
                   className="w-full mb-6 outline-none text-xl py-1 px-3 border-b-2 bg-transparent text-white"
                 />
-              </div>
+              
 
               {/* <!-- Remember me checkbox --> */}
               <div className="mb-6 flex items-center justify-between">
