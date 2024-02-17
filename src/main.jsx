@@ -7,6 +7,7 @@ import Footer from './Components/Footer.jsx'
 import Navigation from './Components/Navigation.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
+  
   <React.StrictMode>
     <Navigation />
     <App />

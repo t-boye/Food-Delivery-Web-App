@@ -17,10 +17,10 @@ export default function Registration() {
 
           {/* <!-- Right column container with form --> */}
           <div className="md:w-8/12 lg:ml-6 lg:w-5/12">
-            <h1 className="font-head text-xl sm:text-5xl font-semibold text-center text-white pb-8">
+            <h1 className="font-head text-xl sm:text-5xl pr-16 font-semibold text-center text-white pb-8">
               Sign Up
             </h1>
-            <form>
+            <form className="mr-16">
               {/* <!-- Name input --> */}
              <div className="coolinput flex flex-col lg:pl-64 items-center justify-center">
               <label htmlFor="Name" className="text pb-4">Name:</label>

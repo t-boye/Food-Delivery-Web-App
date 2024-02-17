@@ -153,3 +153,7 @@ body{
   letter-spacing: 1px;
   color: rgb(150, 150, 150);
 }
+
+form{
+  align-items: center;
+}

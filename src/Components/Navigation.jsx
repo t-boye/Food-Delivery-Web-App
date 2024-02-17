@@ -7,7 +7,8 @@ function Navigation() {
 
   const userLinks = [
     { name: "Settings", link: "/settings" },
-    { name: "Sign-out", link: "/Signout" },
+    { name: "Sign In", link: "/log In" },
+    { name: "Sign out", link: "/Signout" },
   ];
 
   return (
@@ -120,6 +121,7 @@ function Navigation() {
               <li className="px-4 py-2 text-gray-700 hover:bg-gray-200">
                 <a href="/services">Contact</a>
               </li>
+
             </ul>
 
             {/* Links from userLinks first */}
