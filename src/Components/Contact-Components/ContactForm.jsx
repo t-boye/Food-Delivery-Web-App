@@ -5,7 +5,9 @@ const ContactForm = () => {
   return (
     <div className="pt-24 text-white">
       <div className="flex justify-center flex-col items-center text-wrap">
-        <h1 className="text-[36px] text-center font-medium">Contact Us</h1>
+        <h1 className="text-[36px] text-center font-medium">
+          Contact Us
+        </h1>
         <p className="px-4 md:w-[550px] font-medium text-[16px] leading-6 text-center">
           At Extrem Soft, we are eager to hear from you and explore the endless
           possibilities for your digital success.

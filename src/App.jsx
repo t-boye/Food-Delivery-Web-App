@@ -7,13 +7,13 @@ import Registration from "./Components/Auth-Components/Registration";
 import ContactUs from "./Pages/ContactUs";
 function App() {
   return (
-    <div className="bg-red">
+    <div className="App">
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
+        <Routes> 
+          <Route index element={<Home />} />
           <Route path="/sign-in" element={<Login />} />
           <Route path="/sign-out" element={<Registration />} />
-          <Route path="/contact" element={<ContactUs />} />
+          <Route path="/contactus" element={<ContactUs />} />
         </Routes>
       </BrowserRouter>
     </div>

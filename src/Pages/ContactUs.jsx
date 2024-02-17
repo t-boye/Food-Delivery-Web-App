@@ -2,7 +2,8 @@ import React from "react";
 import Hero from "../Components/Contact-Components/Hero";
 import ContactServices from "../Components/Contact-Components/ContactServices";
 import ContactForm from "../Components/Contact-Components/ContactForm";
-const ContactUs = () => {
+
+export default function ContactUs() {
   return (
     <div>
       <Hero />
@@ -12,4 +13,4 @@ const ContactUs = () => {
   );
 };
 
-export default ContactUs;
+
