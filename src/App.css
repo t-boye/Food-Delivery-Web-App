@@ -153,3 +153,7 @@ body{
   letter-spacing: 1px;
   color: rgb(150, 150, 150);
 }
+.contact{
+  background-image: url("../src/assets/Images/contacthero.webp");
+  z-index:9999;
+}
