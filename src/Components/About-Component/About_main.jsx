@@ -3,8 +3,8 @@ import './About_Style.css';
 import { motion } from 'framer-motion';
 
 function About() {
-   const maxOrders = 1000000;
-   const maxServed = 7000;
+   const maxOrders = 10000000;
+   const maxServed = 70000;
    
    const [orders, setOrders] = useState(Math.floor(Math.random() * maxOrders) + 1);
    const [served, setServed] = useState(Math.floor(Math.random() * maxServed) + 1);
@@ -47,17 +47,15 @@ function About() {
           Need for My Food App
         </h2>
         <p className="text-gray-600 text-lg text-center mb-10 leading-loose">
-          In today's fast-paced world, finding the time and energy to research and discover new restaurants can be challenging. My Food App makes it easy. With our curated selection of restaurants, intuitive search filters, and personalized recommendations, you can effortlessly find the perfect meal for any occasion.
+          In today's fast-paced world, finding the time and energy to research and discover new restaurants can be challenging and find good healthy food around you. My Food App makes it easy. With our curated selection of restaurants, intuitive search filters, and personalized recommendations, you can effortlessly find the perfect meal for any occasion.
         </p>
-        <img
-          src="/food-image.jpg" // Replace with your actual image source
-          alt="Delicious food"
-          className="object-cover h-64 w-96 rounded-xl mx-auto"
-        />
-      </div>
-
-      {/* New section for numbers */}
-      <div className="flex flex-row justify-between my-20 w-1/2">
+</div>
+      {/* App Performance */}
+      <div className="app-performance">
+      <h2 className="font-head text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-center">
+    App Performance
+  </h2>
+      <div className="flex flex-row justify-between my-16 w-1/2">
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -67,25 +65,37 @@ function About() {
           <h2 className="font-head text-2xl sm:text-4xl md:text-5xl font-bold leading-tight text-center">
              Orders
           </h2>
-          {orders.toLocaleString()}</div>
+          {orders.toLocaleString()}
+          </div>
         </motion.div>
+        <div className="arrow pt-8  md:mx-4">
+            <svg
+               className="w-6 h-6 text-gray-400"
+               xmlns="http://www.w3.org/2000/svg"
+               viewBox="0 0 20 20"
+               fill="currentColor"
+            >
+               <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293z" />
+            </svg>
+         </div>
         <div className="served font-head text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-center">
           <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, ease: 'easeInOut' }}
         >
-        </motion.div><h2 className="font-head text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-center">
+        </motion.div><h2 className="font-head text-2xl sm:text-4xl md:text-5xl font-bold leading-tight text-center">
             Served
           </h2>
         {served.toLocaleString()} 
         </div>
       </div>
+</div>
 
       {/* Call to action */}
       <div className="text-center mt-10">
         <a
-          href="/" // Replace with your desired call to action link
+          href="/sign-In" // Replace with your desired call to action link
           className="inline-block bg-indigo-600 px-8 py-3 text-white font-bold rounded-md hover:bg-indigo-800"
         >
           Start exploring your taste buds today!
