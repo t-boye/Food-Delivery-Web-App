@@ -40,7 +40,7 @@ const Footer = () => {
             >
               <MdEmail />
             </motion.span>
-            <p className="">email@hotmail.com</p>
+            <p className="">myfoodapp@hotmail.com</p>
           </div>
           <div className="flex flex-col items-center justify-center gap-y-6 text-white">
             <motion.span
@@ -125,19 +125,27 @@ const Footer = () => {
               Quick Links
             </h1>
             <ul className="text-white flex flex-col justify-center gap-y-2 text-[16px] font-normal ">
-              <li className="list-item pb-2 cursor-pointer hover:animate-pulse ">
-                Home
-              </li>
-              <li className="list-item pb-2 cursor-pointer hover:animate-pulse">
-                Services
-              </li>
+              <a href="./Home" className="Home">   
+                <li className="list-item pb-2 cursor-pointer hover:animate-pulse ">
+                  Home
+                </li>
+              </a>
 
-              <li className="list-item pb-2 cursor-pointer hover:animate-pulse">
-                About Us
-              </li>
+              <a href="./Services" className="Services">
+                <li className="list-item pb-2 cursor-pointer hover:animate-pulse">
+                  Services
+                </li>
+              </a>
+              <a href="./About" className="About">
+                <li className="list-item pb-2 cursor-pointer hover:animate-pulse">
+                  About Us
+                </li>
+              </a>
+             <a href="./ContactUs" className="ContactUs">
               <li className="list-item pb-2 cursor-pointer hover:animate-pulse">
                 Contact Us
               </li>
+              </a>
             </ul>
           </div>
           <div className="flex flex-col lg:items-center">

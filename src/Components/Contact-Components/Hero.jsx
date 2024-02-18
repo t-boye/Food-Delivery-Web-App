@@ -1,6 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
-// import Food from "../../assets/Images/Burger.png";
+// import { motion } from "framer-motion";
 
 const Hero = () => {
   //  animation variants for the image
@@ -13,9 +12,9 @@ const Hero = () => {
   };
 
   return (
-    <div className="contact mt-16  w-full bg-cover bg-center bg-no-repeat">
+    <div className="contact mt-16 w-full bg-cover bg-center bg-no-repeat">
       <div className="flex flex-col-reverse md:flex-row items-center justify-center md:justify-between md:h-[80vh] ">
-        <div className="left-container text-white w-full  px-4 md:px-12 lg:px-20">
+        <div className="left-container text-white w-full px-8 md:px-12 lg:px-20">
           <div className="dancing-script text-4xl md:text-6xl text-center md:text-left">
             <h1 className="">Get in Touch with Extrem Soft: </h1>
             <h1 className="my-3">Your Gateway to Digital Excellence</h1>

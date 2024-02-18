@@ -46,7 +46,7 @@ export default function Registration() {
                 className="w-full md:w-1/2 lg:w-96 mb-6 outline-none text-xl py-1 border border-b-4 bg-transparent text-white"
               />
             </div>
-         
+                   
               {/* <!-- Remember me checkbox --> */}
               <div className="mb-6 flex items-center justify-between lg:pl-16">
                 <div className="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]">

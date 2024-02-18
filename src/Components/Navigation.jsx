@@ -25,20 +25,20 @@ function Navigation() {
         {/* Links */}
         <div className="font-head hidden md:flex items-center space-x-4">
           <a
-            href="/"
+            href="/Home"
             className="hover:border-b-2 text-white hover:border-blue-500 font-bold text-xl"
           >
             Home
           </a>
           <a
-            href="/"
+            href="/About"
             className="hover:border-b-2 text-white hover:border-blue-500 font-bold text-xl"
           >
             About
           </a>
 
           <a
-            href="Components\Contact-Components\ContactServices.jsx"
+            href="ContactUs"
             className="hover:border-b-2 text-white hover:border-blue-500 font-bold text-xl"
           >
             Contact
