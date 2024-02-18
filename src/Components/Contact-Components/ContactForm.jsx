@@ -10,8 +10,7 @@ const ContactForm = () => {
           Contact Us
         </h1>
         <p className="px-4 md:w-[550px] font-medium text-[19px] leading-6 text-center">
-          At Extrem Soft, we are eager to hear from you and explore the endless
-          possibilities for your digital success.
+        Let's Talk Food! Reach out with any questions or suggestions. 
         </p>
       </div>
       <form>
