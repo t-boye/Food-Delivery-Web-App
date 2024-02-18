@@ -7,8 +7,8 @@ function Navigation() {
 
   const userLinks = [
     { name: "Settings", link: "/settings" },
-    { name: "Sign In", link: "/log In" },
-    { name: "Sign out", link: "/Signout" },
+    { name: "Sign In", link: "/sign-In" },
+    { name: "Sign out", link: "/Sign-out" },
   ];
 
   return (
@@ -113,16 +113,21 @@ function Navigation() {
             }`}
           >
             <ul className="">
-              <li className="px-4 py-2 text-gray-700 hover:bg-gray-200">
-                <a href="/home">Home</a>
+              <a href="/home">
+                <li className="px-4 py-2 text-gray-700 hover:bg-gray-200">
+                Home
               </li>
+              </a>
+              <a href="/About">
               <li className="px-4 py-2 text-gray-700 hover:bg-gray-200">
-                <a href="/about">About</a>
+                About
               </li>
-              <li className="px-4 py-2 text-gray-700 hover:bg-gray-200">
-                <a href="/services">Contact</a>
+              </a>
+              <a href="/ContactUs">
+                <li className="px-4 py-2 text-gray-700 hover:bg-gray-200">
+                Contact
               </li>
-
+              </a>
             </ul>
 
             {/* Links from userLinks first */}
