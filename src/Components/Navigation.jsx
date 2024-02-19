@@ -25,7 +25,7 @@ function Navigation() {
         {/* Links */}
         <div className="font-head hidden md:flex items-center space-x-4">
           <a
-            href="/Home"
+            href="/"
             className="hover:border-b-2 text-white hover:border-blue-500 font-bold text-xl"
           >
             Home
@@ -115,18 +115,18 @@ function Navigation() {
             <ul className="">
               <a href="/home">
                 <li className="px-4 py-2 text-gray-700 hover:bg-gray-200">
-                Home
-              </li>
+                  Home
+                </li>
               </a>
               <a href="/About">
-              <li className="px-4 py-2 text-gray-700 hover:bg-gray-200">
-                About
-              </li>
+                <li className="px-4 py-2 text-gray-700 hover:bg-gray-200">
+                  About
+                </li>
               </a>
               <a href="/ContactUs">
                 <li className="px-4 py-2 text-gray-700 hover:bg-gray-200">
-                Contact
-              </li>
+                  Contact
+                </li>
               </a>
             </ul>
 
