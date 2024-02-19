@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Food from "../../assets/Images/Burger.png";
+import Chef from "../../assets/Images/chef-vector-bg-removed.png"
 
 const Hero = () => {
   //  animation variants for the image
@@ -13,14 +13,14 @@ const Hero = () => {
   };
 
   return (
-    <div className="Hero-section mt-16 h-screen w-full bg-cover bg-center bg-no-repeat">
+    <div className="Hero-section mt-16  w-full bg-cover bg-center bg-no-repeat">
       <div className="flex flex-col-reverse md:flex-row items-center justify-center md:justify-between border-[3px] md:h-[80vh] border-white rounded-2xl">
         {/* left container */}
         <div className="left-container text-white w-full md:w-1/2 px-4 md:px-12 lg:px-20">
-          <div className="dancing-script text-4xl md:text-6xl text-center md:text-left">
-            <h1 className="">We Provide</h1>
-            <h1 className="my-3">delivery Within</h1>
-            <h1 className="text-[#d44646]">30 min</h1>
+          <div className="font-head text-6xl md:text-6xl text-center md:text-left">
+            <h1 className="lg:text-8xl">We Provide</h1>
+            <h1 className="my-3 lg:text-8xl">delivery Within</h1>
+            <h1 className="text-[#d44646] lg:text-6xl">30 min</h1>
           </div>
 
           <div className="mt-8 md:mt-12 flex items-center justify-center md:justify-start gap-x-4">
@@ -40,11 +40,12 @@ const Hero = () => {
         </div>
 
         {/* right container / Image Container */}
-        <div className="w-full md:w-1/2 mt-8 md:mt-0">
+        <div className="lg:pl-64 md:w-1/2 mt-8 md:mt-4">
           <motion.img
-            className="w-full"
-            src={Food}
-            width={700}
+            className=""
+            src={Chef}
+            height={150}
+            width={500}
             variants={imageVariants}
             whileHover="hover"
           />

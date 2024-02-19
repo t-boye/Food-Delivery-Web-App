@@ -4,7 +4,7 @@ import { PiCarProfileBold } from "react-icons/pi";
 
 const WhyChoose = () => {
   return (
-    <div className="pb-12 mt-36 px-5">
+    <div className="pb-12 mt-36 px-5 md:mt-16">
       <h1 className="font-head text-5xl text-center text-white pb-16 dancing-script">
         Why Choose Us?
       </h1>

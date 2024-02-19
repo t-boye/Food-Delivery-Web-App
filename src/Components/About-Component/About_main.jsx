@@ -40,9 +40,9 @@ function About() {
       {/* Introduction */}
       <div className="flex flex-wrap md:flex-row gap-10 overflow-hidden max-w-7xl mx-auto rounded-xl pb-10 shadow-md md:shadow-8xl justify-center">
         <div className="md:text-center w-full md:w-1/2 px-8">
-          <h2 className="About-font-head text-8xl pt-8 sm:text-5xl md:text-6xl font-bold leading-tight mb-4">
+          <h3 className="font-head text-4xl pt-8 sm:text-5xl md:text-6xl font-bold leading-tight mb-4">
             About My Food App
-          </h2>
+          </h3>
           <p className="text-gray-600 text-lg mb-8 leading-loose">
             My Food App is your one-stop shop for discovering exciting culinary experiences. We connect you with a wide variety of restaurants and cuisines, offering a convenient and delightful way to explore the world of food.
           </p>
