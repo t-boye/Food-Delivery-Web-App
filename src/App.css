@@ -10,6 +10,10 @@ body{
  }
 .font-head{font-family: 'Protest Strike', sans-serif;}
 
+.About-font-head{
+  font-family: 'Protest Strike', sans-serif;
+}
+
 .slider-container .slick-track{
   display: flex;
   
