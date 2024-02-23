@@ -134,7 +134,7 @@ function Navigation() {
             {userLinks.map((link) => (
               <li
                 key={link.name}
-                className="px-4 py-2 text-gray-700 hover:bg-gray-200"
+                className="px-4 py-2 text-gray-700 hover:bg-[#f08b8b]"
               >
                 <a href={link.link}>{link.name}</a>
               </li>
@@ -146,8 +146,8 @@ function Navigation() {
         <div className="hidden md:flex items-center">
           <input
             type="text"
-            placeholder="Search restaurants or dishes"
-            className="border border-gray-300 rounded-md p-2 pl-10 w-64 focus:border-indigo-500 focus:ring-indigo-500 focus:ring-opacity-50"
+            placeholder="Search Local restaurants / Dishes / Updates / Any..."
+            className="nav-search-bar border border-gray-300 rounded-md p-2 pl-10 focus:border-indigo-500 focus:ring-indigo-500 focus:ring-opacity-50"
           />
           <button className="ml-4 bg-[#d44646] border-blue-300 border hover:bg-transparent text-white font-bold py-2 px-4 rounded-md">
             Search

@@ -16,6 +16,8 @@ const OurMenu = () => {
         <MenuCard />
         <MenuCard />
         <MenuCard />
+        <MenuCard />
+        <MenuCard />
       </div>
       <div className="flex items-center justify-center">
         <a

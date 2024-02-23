@@ -43,7 +43,7 @@ function About() {
           <h3 className="font-head text-4xl pt-8 sm:text-5xl md:text-6xl font-bold leading-tight mb-4">
             About My Food App
           </h3>
-          <p className="text-gray-600 text-lg mb-8 leading-loose">
+          <p className="text-gray-800 text-2xl mb-8 leading-loose">
             My Food App is your one-stop shop for discovering exciting culinary experiences. We connect you with a wide variety of restaurants and cuisines, offering a convenient and delightful way to explore the world of food.
           </p>
         </div>
@@ -52,23 +52,21 @@ function About() {
    {/*Mission*/}
    <div className="flex flex-col pt-16 gap-10 max-w-7xl mx-4 mr-8 md:flex-row md:items-left md:justify-between">
   <div className="md:w-1/2 relative">
-    <div className="pl-8 md:text-left">
+    <div className="pl-8 mb-8 md:text-left">
       <h2 className="font-head text-3xl pt-8 sm:text-4xl md:text-5xl font-bold leading-tight text-center md:text-center">
         Mission
       </h2>
-      <p className="text-gray-600 text-lg pt-8 text-center md:text-left mb-10 leading-loose">
+      <p className="text-gray-600 text-2xl pt-8 text-center md:text-left mb-10 leading-loose">
       Connecting passionate foodies with hidden culinary gems and empowering them to discover a world of flavorful experiences.
-      <br />
+     
       We eliminate the "what should I eat?" dilemma by providing a seamless platform for discovering amazing local restaurants and sharing authentic reviews.
-      <br />
        We celebrate culinary diversity, support independent restaurants, and promote joyful food adventures, one bite at a time.
       </p>
     </div>
   </div>
   <div className="md:w-1/2">
     <div className="pl-8">
-      <img src="https://i.postimg.cc/mD4K8st3/e0a3f89b63c5b082120b9bc70cee629a.jpg" className=" pt-4 pr-8 mb-10 leading-loose">
-      </img>
+      <img src="https://i.postimg.cc/mD4K8st3/e0a3f89b63c5b082120b9bc70cee629a.jpg" className="pt-16 pr-8 mb-10 leading-loose" />
     </div>
   </div>
 </div>
@@ -85,7 +83,7 @@ function About() {
     <h2 className="font-head text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-center text-center">
       Vision
     </h2>
-    <p className="text-gray-600 text-lg pt-8 text-center md:text-left mb-10 leading-loose">
+    <p className="text-gray-600 text-2xl pt-8 text-center md:text-left mb-10 leading-loose">
       We envision a world where every hungry diner has instant access to a wealth of local culinary treasures.
       <br />
       My Food App will be the go-to platform for restaurants to attract new customers and users to explore a diverse range of flavors.
