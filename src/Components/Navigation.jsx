@@ -43,6 +43,12 @@ function Navigation() {
           >
             Contact
           </a>
+          <a
+            href="Chat"
+            className="hover:border-b-2 text-white hover:border-blue-500 font-bold text-xl"
+          >
+            Help?
+          </a>
           <div className="flex items-center hover:text-gray-600 lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
