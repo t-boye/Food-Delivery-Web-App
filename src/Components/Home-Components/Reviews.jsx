@@ -45,6 +45,7 @@ const Reviews = () => {
           <div className="body-review bg-gray-200 p-8 shadow">
             <div className="name-review text-2xl text-gray-800 mb-1">Lucy Nabarise</div>
             <div className="place-review italic text-red-500">Madina - Accra</div>
+            {/* Review stars */}
             <div className="flex items-center justify-between px-[10px]">
         <div className="flex items-center pl-11 gap-x-1 text-xl text-yellow-500">
               <FaStar />

@@ -36,12 +36,12 @@ class ErrorBoundary extends Component {
 const Home = () => {
   return (
     <div>
-      <Hero />
-      <ErrorBoundary>
-      </ErrorBoundary>   
+       <ErrorBoundary>
+      <Hero />    
       <WhyChoose />
       <OurMenu />
       <Reviews />
+      </ErrorBoundary> 
     </div>
   );
 };

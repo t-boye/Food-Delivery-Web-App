@@ -1,2 +1,2 @@
-bg-[#d44646] 
-NavBar - bg-gray-800
+// Secondary color
+      [#d44646] 

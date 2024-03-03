@@ -26,7 +26,7 @@ export default function Registration() {
               <label htmlFor="Name" className="text pb-4">Name:</label>
               <input
                 type="full_name"
-                className="w-full md:w-1/2 lg:w-96 mb-6 outline-none text-xl py-1 border border-b-4 bg-transparent text-white"
+                className="w-full md:w-1/2 lg:w-[550px] lg:ml-16 mb-6 outline-none text-xl py-1 border-l-4 border-t-2 border-r-4 bg-transparent text-white"
               />
             </div>
                  {/* <!-- Email input --> */}
@@ -34,7 +34,7 @@ export default function Registration() {
               <label htmlFor="Name" className="text pb-4">Email:</label>
                 <input
                   type="full_name"
-                  className="w-full md:w-1/2 lg:w-96 mb-6 outline-none text-xl py-1 border border-b-4 bg-transparent text-white"
+                  className="w-full md:w-1/2 lg:w-[550px] lg:ml-16 mb-6 outline-none text-xl py-1  border-l-4 border-t-2 border-r-4 bg-transparent text-white"
                 />
               </div>
                
@@ -43,12 +43,12 @@ export default function Registration() {
               <label htmlFor="Name" className="text pb-4">Password:</label>
               <input
                 type="full_name"
-                className="w-full md:w-1/2 lg:w-96 mb-6 outline-none text-xl py-1 border border-b-4 bg-transparent text-white"
+                className="w-full md:w-1/2 lg:w-[550px] lg:ml-16 mb-6 outline-none text-xl py-1 border-l-4 border-t-2 border-r-4 bg-transparent text-white"
               />
             </div>
                    
               {/* <!-- Remember me checkbox --> */}
-              <div className="mb-6 flex items-center justify-between lg:pl-16">
+              <div className="mb-6 my-8 flex items-center justify-between lg:pl-4">
                 <div className="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]">
                   <input
                     className="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
@@ -96,7 +96,7 @@ export default function Registration() {
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
-                    <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+                    <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.5[550px] 0-5.192 1.583-5.192 4.615v3.385z" />
                   </svg>
                   Continue with Facebook
                 </a>

@@ -7,8 +7,7 @@ const OurMenu = () => {
       <h2 className="font-head text-center pt-10 text-5xl font-semibold pb-5 text-white">
         Explore Our Menu
       </h2>
-      <hr className="w-10 h-3 color-red pl" />
-
+          {/* List of Menu Cards */}   
       <div className="flex flex-wrap justify-center gap-16 mt-12 pb-12 px-10">
         <MenuCard />
         <MenuCard />
