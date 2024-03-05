@@ -3,6 +3,7 @@ import { FaStar, FaStarHalfAlt } from 'react-icons/fa';
 
 const Reviews = () => {
   return (
+    // Reviews
     <div className="review-section">
       <h2 className="font-head text-center pt-32 text-5xl font-semibold pb-5 text-white">
         Reviews
