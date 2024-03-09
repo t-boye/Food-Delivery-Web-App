@@ -12,7 +12,6 @@ This documentation provides a comprehensive guide for using the template Influen
   - [Installation](#installation)
   - [Folder Structure](#folder-structure)
 2. [Customization](#customization)
-  - [Updating Personal Information](#updating-personal-information)
   - [Modifying Sections](#modifying-sections)
   - [Styling](#styling)
 3. [Available Scripts](#available-scripts)
