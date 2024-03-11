@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "../index.css";
-import "../App.css";
+import "../../index.css";
+import "../../App.css";
 
 function Navigation() {
   const [toggle, setToggle] = useState(false);
@@ -121,18 +121,18 @@ function Navigation() {
             <ul className="">
               <a href="/home">
                 <li className="px-4 py-2 text-gray-700 hover:bg-gray-200">
-                Home
-              </li>
+                  Home
+                </li>
               </a>
               <a href="/About">
-              <li className="px-4 py-2 text-gray-700 hover:bg-gray-200">
-                About
-              </li>
+                <li className="px-4 py-2 text-gray-700 hover:bg-gray-200">
+                  About
+                </li>
               </a>
               <a href="/ContactUs">
                 <li className="px-4 py-2 text-gray-700 hover:bg-gray-200">
-                Contact
-              </li>
+                  Contact
+                </li>
               </a>
             </ul>
 
@@ -158,26 +158,6 @@ function Navigation() {
           <button className="ml-4 bg-[#d44646] border-blue-300 border hover:bg-transparent text-white font-bold py-2 px-4 rounded-md">
             Search
           </button>
-        </div>
-
-        {/* Sign In and Sign Out */}
-        <div className="sign-container hidden md:block text-white">
-          <a
-            href="/sign-in"
-            className="border bg-[#d44646] border-blue-300 rounded-md p-2 pl-5 w-64 
-        focus:border-indigo-500
-        hover:bg-transparent cursor-pointer focus:ring-indigo-500 focus:ring-opacity-50"
-          >
-            Sign In
-          </a>
-          <a
-            href="/sign-out"
-            className="border border-blue-300 rounded-md p-2 pl-5 w-64 
-        hover:bg-[#e63b3b]
-        focus:border-[#d44646] focus:ring-[#d44646] focus:ring-opacity-50"
-          >
-            Sign Up
-          </a>
         </div>
       </div>
     </nav>

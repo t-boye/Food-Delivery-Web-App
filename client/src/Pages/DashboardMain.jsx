@@ -1,9 +1,10 @@
+import React from "react";
 import { useState } from "react";
-import Header from "./Header";
-import Sidebar from "./Sidebar";
-import Home from "./Home";
+import Header from "../Components/Dashboard-Components/Header";
+import Sidebar from "../Components/Dashboard-Components/Sidebar";
+import Home from "../Components/Dashboard-Components/Home";
 
-const Main = () => {
+const DashboardMain = () => {
   const [openSidebarToggle, setOpenSidebarToggle] = useState(false);
 
   const OpenSidebar = () => {
@@ -24,4 +25,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default DashboardMain;
