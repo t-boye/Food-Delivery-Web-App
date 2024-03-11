@@ -3,9 +3,8 @@ import Hero from "../Components/Home-Components/Hero";
 import Reviews from "../Components/Home-Components/Reviews";
 import WhyChoose from "../Components/Home-Components/WhyChoose";
 import OurMenu from "../Components/Home-Components/OurMenu";
-
-import  { Component } from 'react';
-
+import Navigation from "../Components/Home-Components/Navigation";
+import { Component } from "react";
 
 class ErrorBoundary extends Component {
   constructor(props) {
@@ -26,7 +25,11 @@ class ErrorBoundary extends Component {
   render() {
     if (this.state.hasError) {
       // You can customize the error UI here
-      return <h1 className="text-white">Something went wrong _ Error needs to be debugged.!!!</h1>;
+      return (
+        <h1 className="text-white">
+          Something went wrong _ Error needs to be debugged.!!!
+        </h1>
+      );
     }
 
     // Render the children components if there is no error
@@ -36,12 +39,13 @@ class ErrorBoundary extends Component {
 const Home = () => {
   return (
     <div>
-       <ErrorBoundary>
-      <Hero />    
-      <WhyChoose />
-      <OurMenu />
-      <Reviews />
-      </ErrorBoundary> 
+      <ErrorBoundary>
+        <Navigation />
+        <Hero />
+        <WhyChoose />
+        <OurMenu />
+        <Reviews />
+      </ErrorBoundary>
     </div>
   );
 };

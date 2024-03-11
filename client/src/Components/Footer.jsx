@@ -53,9 +53,7 @@ const Footer = () => {
             >
               <FaLocationDot />
             </motion.span>
-            <p className="px-4 text-center">
-              Abeka - Accra{" "}
-            </p>
+            <p className="px-4 text-center">Abeka - Accra </p>
           </div>
         </div>
       </div>
@@ -71,8 +69,10 @@ const Footer = () => {
           >
             My Food App
           </h1>
-          <p className="w-[300px] text-[#cac7c7] py-5">
-          our all-in-one solution for recipes, restaurant recommendations, and personalized dietary guidance. Whether you're a cooking enthusiast or looking for convenient dining options, our app has you covered.
+          <p className="w-[300px] text-white py-5">
+            our all-in-one solution for recipes, restaurant recommendations, and
+            personalized dietary guidance. Whether you're a cooking enthusiast
+            or looking for convenient dining options, our app has you covered.
           </p>
           <div className="flex items-center mt-1 text-xl gap-x-2">
             <motion.span
@@ -125,7 +125,7 @@ const Footer = () => {
               Quick Links
             </h1>
             <ul className="text-white flex flex-col justify-center gap-y-2 text-[16px] font-normal ">
-              <a href="./Home" className="Home">   
+              <a href="./Home" className="Home">
                 <li className="list-item pb-2 cursor-pointer hover:animate-pulse ">
                   Home
                 </li>
@@ -141,10 +141,10 @@ const Footer = () => {
                   About Us
                 </li>
               </a>
-             <a href="./ContactUs" className="ContactUs">
-              <li className="list-item pb-2 cursor-pointer hover:animate-pulse">
-                Contact Us
-              </li>
+              <a href="./ContactUs" className="ContactUs">
+                <li className="list-item pb-2 cursor-pointer hover:animate-pulse">
+                  Contact Us
+                </li>
               </a>
             </ul>
           </div>
@@ -186,14 +186,43 @@ const Footer = () => {
               </li>
             </ul>
           </div>
+          <div className="flex flex-col lg:items-center">
+            <h1 className="font-head text-[24px] font-medium mr-10 text-white pb-4 flex lg:justify-center">
+              Newsletter
+            </h1>
+            <p className="text-white text-md lg:text-center pb-4">
+              Stay up-to-date with our latest news, updates, <br />
+              and exclusive offers by signing up for our newsletter.
+            </p>
+            <div className="text-white flex flex-col justify-center gap-y-2 text-[16px] font-normal ">
+              <form>
+                <input
+                  type="email"
+                  placeholder="Your email address"
+                  className="bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 border border-gray-300 rounded-md py-2 px-4"
+                />
+              </form>
+              <button
+                type="submit"
+                className="bg-[#d44646] hover:bg-transparent border border-blue  text-white font-bold py-2 px-4 rounded"
+              >
+                Sign Up
+              </button>
+            </div>
+          </div>
         </div>
       </div>
       <div
         style={{ background: background }}
         className="flex font-semibold justify-center w-full items-center py-2 border-t-2 border-white text-white  "
       >
-        <p className="text-1xl">© 2024 Copyright
-        <span className="pl-4 pr-3 text-1xl dancing-script">My Food App</span>  All Rights Reserved</p>
+        <p className="text-1xl">
+          © 2024 Copyright
+          <span className="pl-4 pr-3 text-1xl dancing-script">
+            My Food App
+          </span>{" "}
+          All Rights Reserved
+        </p>
       </div>
     </div>
   );

@@ -7,7 +7,7 @@ import Login from "./Components/Auth-Components/Login";
 import Registration from "./Components/Auth-Components/Registration";
 import ContactUs from "./Pages/ContactUs";
 import Chat from "./Pages/Chat";
-import Main from "./Components/Dashboard/Main";
+import DashboardMain from "./Pages/DashboardMain";
 function App() {
   return (
     <div className="App">
@@ -19,7 +19,7 @@ function App() {
           <Route path="/sign-out" element={<Registration />} />
           <Route path="/contactus" element={<ContactUs />} />
           <Route path="/chat" element={<Chat />} />
-          <Route path="/dashboard" element={<Main />} />
+          <Route path="/dashboard" element={<DashboardMain />} />
         </Routes>
       </BrowserRouter>
     </div>
