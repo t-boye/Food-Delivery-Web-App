@@ -1,6 +1,6 @@
 #  Food Delivery and Local Restaurant Search App
 
-This documentation provides a comprehensive guide for using the template Influencer Portfolio made with React. The template is designed to showcase the portfolio of an influencer or content creator. It includes various sections to highlight different aspects of the influencer's work, such as biography, social media presence, collaborations, and more.
+This documentation provides a comprehensive guide for using the template  Food Delivery and Local Restuaraant Search made with MERN. 
 
 ## Demo
 ![ Food Delivery and Local Restaurant Search App Demo](#)
