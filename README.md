@@ -56,7 +56,7 @@ To use the template Influencer Portfolio, you need to have the following prerequ
 After cloning and installing the template, the project directory will have the following structure:
 
 ```
-influencer-portfolio/
+myFoodApp/
  README.md
  node_modules/
  package.json
