@@ -42,10 +42,7 @@ function App() {
       )}
       <BrowserRouter>
         <Routes>
-<<<<<<< HEAD
           <Route index element={<Home />} />
-=======
->>>>>>> parent of 3415d44 (login and Register (1) commit)
           <Route path="/Home" element={<Home />} />
           <Route path="/About" element={<About />} />
           <Route path="/sign-in" element={<Login />} />
