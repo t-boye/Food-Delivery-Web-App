@@ -1,8 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaGoogle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 export default function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const handleSubmit = async (event) => {
+    event.preventDefault(); // Prevent default form submission behavior
+
+    // Basic email validation (optional, can be extended)
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      setErrorMessage("Please enter a valid email address");
+      return; // Exit if email is invalid
+    }
+
+    if (!password.trim()) {
+      setErrorMessage("Please enter your password");
+      return; // Exit if password is empty
+    }
+
+    try {
+      const response = await fetch("/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Login failed with status: ${response.status}`);
+      }
+
+      const data = await response.json();
+      console.log("Login successful:", data);
+
+      localStorage.setItem("jwtToken", data.token); // Example: Store JWT token in localStorage
+      window.location.href = "/dashboard";
+    } catch (error) {
+      console.error("Login error:", error);
+      setErrorMessage("Login failed. Please check your email and password.");
+    }
+  };
+
   return (
     <section className="pt-12">
       <div className="container h-full px-6 py-24">
@@ -16,6 +56,18 @@ export default function Login() {
             />
           </div>
 
+<<<<<<< HEAD
+            {/* <!-- Right column container with form --> */}
+            <div className="md:w-8/12 lg:ml-6 lg:w-5/12">
+              <h1 className="font-head text-xl sm:text-5xl font-semibold text-center text-white pb-8">
+                Sign In
+              </h1>
+              <form onSubmit={handleSubmit}>
+                {/* <!-- Email input --> */}
+                <label htmlFor="Email" className="text-[#818CF8] pb-4">
+                  Email:
+                </label>
+=======
           {/* <!-- Right column container with form --> */}
           <div className="md:w-8/12 lg:ml-6 lg:w-5/12">
           <h1 className="font-head text-xl sm:text-5xl font-semibold text-center text-white pb-8">
@@ -24,10 +76,13 @@ export default function Login() {
             <form>
               {/* <!-- Email input --> */}
               <label htmlFor="Email" className="text-[#818CF8] pb-4">Email:</label>
+>>>>>>> parent of 3415d44 (login and Register (1) commit)
                 <input
                   type="email"
                   placeholder=""
                   className="w-full mb-6 outline-none text-xl py-1 px-3 border-l-4 border-t-2 border-r-4 bg-transparent text-white"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
 
                 {/* <!--Password input--> */}
@@ -36,8 +91,16 @@ export default function Login() {
                   type="password"
                   placeholder=""
                   className="w-full mb-6 outline-none text-xl py-1 px-3 border-l-4 border-t-2 border-r-4 bg-transparent text-white"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                 />
+<<<<<<< HEAD
+                {errorMessage && (
+                  <p className="text-red-500 text-sm pb-8">{errorMessage}</p>
+                )}
+=======
               
+>>>>>>> parent of 3415d44 (login and Register (1) commit)
 
               {/* <!-- Remember me checkbox --> */}
               <div className="mb-6 flex items-center justify-between">
@@ -57,6 +120,13 @@ export default function Login() {
                   </label>
                 </div>
 
+<<<<<<< HEAD
+                {/* <!-- Submit button --> */}
+                <div className="w-full flex items-center  gap-x-4">
+                  <button
+                    type="submit"
+                    className="w-1/2 inline-block rounded bg-primary px-7 pb-2.5 pt-3 text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+=======
                 {/* <!-- Forgot password link --> */}
                 <a
                   href="#!"
@@ -79,9 +149,27 @@ export default function Login() {
                   <button
                     type="button"
                     className="w-full  inline-block rounded bg-primary px-7 pb-2.5 pt-3 text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+>>>>>>> parent of 3415d44 (login and Register (1) commit)
                   >
                     Registration
                   </button>
+<<<<<<< HEAD
+                  <Link to="/register" className="w-1/2">
+                    <button
+                      type="button"
+                      className="w-full  inline-block rounded bg-primary px-7 pb-2.5 pt-3 text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+                    >
+                      Registration
+                    </button>
+                  </Link>
+                </div>
+                {/* <!-- Divider --> */}
+                <div className="my-4 flex items-center before:mt-0.5 before:flex-1 before:border-t before:border-neutral-300 after:mt-0.5 after:flex-1 after:border-t after:border-neutral-300">
+                  <p className="mx-4 mb-0 text-center font-semibold dark:text-neutral-200">
+                    OR
+                  </p>
+                </div>
+=======
                 </Link>
               </div>
 
@@ -91,6 +179,7 @@ export default function Login() {
                   OR
                 </p>
               </div>
+>>>>>>> parent of 3415d44 (login and Register (1) commit)
 
               {/* <!-- Social login buttons --> */}
               <div className="w-full">

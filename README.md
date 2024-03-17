@@ -1,24 +1,29 @@
-#  Food Delivery and Local Restaurant Search App
+# Food Delivery and Local Restaurant Search App
 
+<<<<<<< Updated upstream
 This documentation provides a comprehensive guide for using the template  Food Delivery and Local Restuaraant Search made with MERN. 
+=======
+This documentation provides a comprehensive guide for using the Food Delivery and Local Restaurant Search App Demo made with React.
+>>>>>>> Stashed changes
 
 ## Demo
+
 ![ Food Delivery and Local Restaurant Search App Demo](#)
 
 ## Table of Contents
 
 1. [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-  - [Folder Structure](#folder-structure)
+     - [Prerequisites](#prerequisites)
+     - [Installation](#installation)
+     - [Folder Structure](#folder-structure)
 2. [Customization](#customization)
-  - [Modifying Sections](#modifying-sections)
-  - [Styling](#styling)
+     - [Modifying Sections](#modifying-sections)
+     - [Styling](#styling)
 3. [Available Scripts](#available-scripts)
-  - [`npm start`](#npm-start)
-  - [`npm test`](#npm-test)
-  - [`npm run build`](#npm-run-build)
-  - [`npm run eject`](#npm-run-eject)
+     - [`npm start`](#npm-start)
+     - [`npm test`](#npm-test)
+     - [`npm run build`](#npm-run-build)
+     - [`npm run eject`](#npm-run-eject)
 4. [Deployment](#deployment)
 5. [Additional Resources](#additional-resources)
 
@@ -26,7 +31,7 @@ This documentation provides a comprehensive guide for using the template  Food D
 
 ### Prerequisites
 
-To use the template Influencer Portfolio, you need to have the following prerequisites installed on your machine:
+To use the template My Food App, you need to have the following prerequisites installed on your machine:
 
 - Node.js (version 12 or higher)
 - npm (Node Package Manager)
@@ -35,28 +40,32 @@ To use the template Influencer Portfolio, you need to have the following prerequ
 
 1. Start by cloning the template repository from GitHub:
 
-  ```bash
+`bash
   git clone <repository-url>
-  ```
+  `
 
 2. Navigate to the project directory:
 
-  ```bash
+`bash
   cd client
-  ```
+  `
 
 3. Install the project dependencies using npm:
 
-  ```bash
+`bash
   npm install
-  ```
+  `
 
 ### Folder Structure
 
 After cloning and installing the template, the project directory will have the following structure:
 
 ```
+<<<<<<< Updated upstream
 myFoodApp/
+=======
+MyFoodApp/
+>>>>>>> Stashed changes
  README.md
  node_modules/
  package.json
@@ -100,9 +109,7 @@ myFoodApp/
 
 ## Customization
 
-To personalize the  Food Delivery and Local Restaurant Search App, you can make changes to various aspects of the template, and styling.
-
-
+To personalize the Food Delivery and Local Restaurant Search App, you can make changes to various aspects of the template, and styling.
 
 ### Modifying Sections
 
@@ -144,7 +151,7 @@ If you need to customize the build tool and configuration choices provided by Cr
 
 ## Deployment
 
-To deploy your  Food Delivery and Local Restaurant Search App to a web server, you can follow the deployment guide provided in the [Create React App documentation](https://create-react-app.dev/docs/deployment/).
+To deploy your Food Delivery and Local Restaurant Search App to a web server, you can follow the deployment guide provided in the [Create React App documentation](https://create-react-app.dev/docs/deployment/).
 
 ## Additional Resources
 
@@ -155,4 +162,4 @@ For more detailed information on working with React and Create React App, refer 
 
 Go wild! Make this template your own.
 
-###  BackEnd developer needed for collaboration asap...
+### BackEnd developer needed for collaboration asap...
