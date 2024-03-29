@@ -85,7 +85,7 @@ app.get("/profile", (req, res) => {
     return res.status(401).json({ message: "Unauthorized" });
   }
   // Use template literals or string interpolation for secure output
-  res.json({ message: `Welcome back, ${req.user.name}` });
+  res.json({ message: `Welcome back, ${req.user.username}` });
 });
 
 app.post("/logout", (req, res) => {
@@ -93,41 +93,25 @@ app.post("/logout", (req, res) => {
   res.json({ message: "Logged out successfully" });
 });
 
-// Define the '/register' endpoint
 app.post("/register", async (req, res) => {
   try {
-    const { name, email, password } = req.body;
+    console.log("Registration request received!"); // Add this line for logging
+
+    const { username, email, password } = req.body;
 
     // Data Validation (optional, can be extended)
-    if (!name || !email || !password) {
+    if (!username || !email || !password) {
       return res
         .status(400)
         .json({ message: "Please fill in all required fields" });
     }
 
-    // Check for existing user with the same email
-    const existingUser = await User.findOne({ email });
-    if (existingUser) {
-      return res.status(400).json({ message: "Email already exists" });
-    }
+    // Your registration logic here (e.g., user creation, password hashing)
 
-    // Hash password using bcrypt
-    const hashedPassword = await bcrypt.hash(password, 10);
-
-    // Create new user
-    const user = new User({
-      name,
-      email,
-      password: hashedPassword,
-    });
-
-    await user.save();
-
-    // Respond with success or send a confirmation email (optional)
-    res.status(201).json({ message: "Registration successful!" });
+    // ...
   } catch (error) {
-    console.error(error);
-    res.status(500).json({ message: "Server error" });
+    console.error("Error during registration:", error); // Log errors for debugging
+    return res.status(500).json({ message: "Internal server error" });
   }
 });
 

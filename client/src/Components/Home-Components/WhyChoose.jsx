@@ -9,7 +9,7 @@ const WhyChoose = () => {
       <div className="text-white flex flex-col md:flex-row md:justify-between">
         <div className="w-full md:w-[30%] flex flex-col justify-center gap-y-3 items-center">
           <img
-            src={("https://i.postimg.cc/C1kVGRHs/9446156.png")}
+            src={"https://i.postimg.cc/C1kVGRHs/9446156.png"}
             className="w-32 h-32 md:w-[160px] md:h-[160px]  object-cover"
             alt="Fresh Food"
           />
@@ -25,7 +25,7 @@ const WhyChoose = () => {
 
         <div className="w-full md:w-[30%] flex flex-col justify-center gap-y-3 items-center">
           <img
-            src={("https://i.postimg.cc/hPSfGnc5/10823283.png")}
+            src={"https://i.postimg.cc/hPSfGnc5/10823283.png"}
             className="w-32 h-32 md:w-[160px] md:h-[160px]  object-cover"
             alt="Best Offers"
           />
@@ -40,7 +40,7 @@ const WhyChoose = () => {
         </div>
         <div className="w-full md:w-[30%] flex flex-col justify-center gap-y-3 items-center">
           <img
-            src={("https://i.postimg.cc/Wzcq8JRN/4860866.png")}
+            src={"https://i.postimg.cc/Wzcq8JRN/4860866.png"}
             className="w-32 h-32 md:w-[160px] md:h-[160px]  object-cover"
             alt="Fast Delivery"
           />

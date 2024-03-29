@@ -20,33 +20,49 @@ export default function Registration() {
             <h1 className="font-head text-xl sm:text-5xl pr-16 font-semibold text-center text-white pb-8">
               Sign Up
             </h1>
-            <form className="mr-16">
+            <form
+              class="mr-16"
+              action="http://localhost:5173/register"
+              method="POST"
+            >
               {/* <!-- Name input --> */}
-             <div className="coolinput flex flex-col lg:pl-64 items-center justify-center">
-              <label htmlFor="Name" className="text pb-4">Name:</label>
-              <input
-                type="full_name"
-                className="w-full md:w-1/2 lg:w-[550px] lg:ml-16 mb-6 outline-none text-xl py-1 border-l-4 border-t-2 border-r-4 bg-transparent text-white"
-              />
-            </div>
-                 {/* <!-- Email input --> */}
-                 <div className="coolinput flex flex-col lg:pl-64 items-center justify-center">
-              <label htmlFor="Name" className="text pb-4">Email:</label>
+              <div className="coolinput flex flex-col lg:pl-64 items-center justify-center">
+                <label htmlFor="username" className="text pb-4">
+                  Username:
+                </label>
                 <input
-                  type="full_name"
-                  className="w-full md:w-1/2 lg:w-[550px] lg:ml-16 mb-6 outline-none text-xl py-1  border-l-4 border-t-2 border-r-4 bg-transparent text-white"
+                  type="text"
+                  name="username"
+                  id="username"
+                  className="w-full md:w-1/2 lg:w-[550px] lg:ml-16 mb-6 outline-none text-xl py-1 border-l-4 border-t-2 border-r-4 bg-transparent text-white"
                 />
               </div>
-               
-                {/* <!--Password input--> */}
-                <div className="coolinput flex flex-col lg:pl-64 items-center justify-center">
-              <label htmlFor="Name" className="text pb-4">Password:</label>
-              <input
-                type="full_name"
-                className="w-full md:w-1/2 lg:w-[550px] lg:ml-16 mb-6 outline-none text-xl py-1 border-l-4 border-t-2 border-r-4 bg-transparent text-white"
-              />
-            </div>
-                   
+              {/* <!-- Email input --> */}
+              <div className="coolinput flex flex-col lg:pl-64 items-center justify-center">
+                <label htmlFor="email" className="text pb-4">
+                  Email:
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  className="w-full md:w-1/2 lg:w-[550px] lg:ml-16 mb-6 outline-none text-xl py-1 border-l-4 border-t-2 border-r-4 bg-transparent text-white"
+                />
+              </div>
+
+              {/* <!--Password input--> */}
+              <div className="coolinput flex flex-col lg:pl-64 items-center justify-center">
+                <label htmlFor="password" className="text pb-4">
+                  Password:
+                </label>
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  className="w-full md:w-1/2 lg:w-[550px] lg:ml-16 mb-6 outline-none text-xl py-1 border-l-4 border-t-2 border-r-4 bg-transparent text-white"
+                />
+              </div>
+
               {/* <!-- Remember me checkbox --> */}
               <div className="mb-6 my-8 flex items-center justify-between lg:pl-4">
                 <div className="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]">
@@ -58,8 +74,8 @@ export default function Registration() {
                     className="inline-block pl-[0.15rem] hover:cursor-pointer"
                     htmlFor="exampleCheck3"
                   >
-              I accept the terms and conditions 
-              </label>
+                    I accept the terms and conditions
+                  </label>
                 </div>
               </div>
 
@@ -67,10 +83,16 @@ export default function Registration() {
 
               <div className="w-full">
                 <button
-                  type="button"
-                  className="inline-block w-full rounded bg-primary px-7 pb-2.5 pt-3 text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+                  type="submit"
+                  className="w-1/2 inline-block rounded bg-primary px-7 pb-2.5 pt-3 text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
                 >
-                  Register
+                  SIGN IN
+                </button>
+                <button
+                  type="submit"
+                  className="w-1/2 inline-block rounded bg-primary px-7 pb-2.5 pt-3 text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+                >
+                  GET REGISTERED
                 </button>
               </div>
 

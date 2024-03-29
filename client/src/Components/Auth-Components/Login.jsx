@@ -56,51 +56,38 @@ export default function Login() {
             />
           </div>
 
-<<<<<<< HEAD
-            {/* <!-- Right column container with form --> */}
-            <div className="md:w-8/12 lg:ml-6 lg:w-5/12">
-              <h1 className="font-head text-xl sm:text-5xl font-semibold text-center text-white pb-8">
-                Sign In
-              </h1>
-              <form onSubmit={handleSubmit}>
-                {/* <!-- Email input --> */}
-                <label htmlFor="Email" className="text-[#818CF8] pb-4">
-                  Email:
-                </label>
-=======
           {/* <!-- Right column container with form --> */}
           <div className="md:w-8/12 lg:ml-6 lg:w-5/12">
-          <h1 className="font-head text-xl sm:text-5xl font-semibold text-center text-white pb-8">
+            <h1 className="font-head text-xl sm:text-5xl font-semibold text-center text-white pb-8">
               Sign In
             </h1>
-            <form>
+            <form onSubmit={handleSubmit}>
               {/* <!-- Email input --> */}
-              <label htmlFor="Email" className="text-[#818CF8] pb-4">Email:</label>
->>>>>>> parent of 3415d44 (login and Register (1) commit)
-                <input
-                  type="email"
-                  placeholder=""
-                  className="w-full mb-6 outline-none text-xl py-1 px-3 border-l-4 border-t-2 border-r-4 bg-transparent text-white"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
+              <label htmlFor="Email" className="text-[#818CF8] pb-4">
+                Email:
+              </label>
+              <input
+                type="email"
+                placeholder=""
+                className="w-full mb-6 outline-none text-xl py-1 px-3 border-l-4 border-t-2 border-r-4 bg-transparent text-white"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
 
-                {/* <!--Password input--> */}
-                <label htmlFor="Password" className="text-[#818CF8] pb-4">Password:</label>
-                <input
-                  type="password"
-                  placeholder=""
-                  className="w-full mb-6 outline-none text-xl py-1 px-3 border-l-4 border-t-2 border-r-4 bg-transparent text-white"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                />
-<<<<<<< HEAD
-                {errorMessage && (
-                  <p className="text-red-500 text-sm pb-8">{errorMessage}</p>
-                )}
-=======
-              
->>>>>>> parent of 3415d44 (login and Register (1) commit)
+              {/* <!--Password input--> */}
+              <label htmlFor="Password" className="text-[#818CF8] pb-4">
+                Password:
+              </label>
+              <input
+                type="password"
+                placeholder=""
+                className="w-full mb-6 outline-none text-xl py-1 px-3 border-l-4 border-t-2 border-r-4 bg-transparent text-white"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+              {errorMessage && (
+                <p className="text-red-500 text-sm pb-8">{errorMessage}</p>
+              )}
 
               {/* <!-- Remember me checkbox --> */}
               <div className="mb-6 flex items-center justify-between">
@@ -119,67 +106,31 @@ export default function Login() {
                     Remember me
                   </label>
                 </div>
-
-<<<<<<< HEAD
-                {/* <!-- Submit button --> */}
-                <div className="w-full flex items-center  gap-x-4">
-                  <button
-                    type="submit"
-                    className="w-1/2 inline-block rounded bg-primary px-7 pb-2.5 pt-3 text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
-=======
-                {/* <!-- Forgot password link --> */}
-                <a
-                  href="#!"
-                  className="text-primary transition duration-150 ease-in-out hover:text-[#d44646] focus:text-primary-600 active:text-primary-700 dark:text-primary-400 dark:focus:text-primary-500 dark:active:text-primary-600"
-                >
-                  Forgot password?
-                </a>
               </div>
 
               {/* <!-- Submit button --> */}
-
               <div className="w-full flex items-center  gap-x-4">
                 <button
-                  type="button"
+                  type="submit"
                   className="w-1/2 inline-block rounded bg-primary px-7 pb-2.5 pt-3 text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
                 >
-                  Sign in
+                  Submit
                 </button>
-                <Link to="/sign-out" className="w-1/2">
+                <Link to="/register" className="w-1/2">
                   <button
                     type="button"
                     className="w-full  inline-block rounded bg-primary px-7 pb-2.5 pt-3 text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
->>>>>>> parent of 3415d44 (login and Register (1) commit)
                   >
-                    Registration
+                    GET REGISTERED
                   </button>
-<<<<<<< HEAD
-                  <Link to="/register" className="w-1/2">
-                    <button
-                      type="button"
-                      className="w-full  inline-block rounded bg-primary px-7 pb-2.5 pt-3 text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
-                    >
-                      Registration
-                    </button>
-                  </Link>
-                </div>
-                {/* <!-- Divider --> */}
-                <div className="my-4 flex items-center before:mt-0.5 before:flex-1 before:border-t before:border-neutral-300 after:mt-0.5 after:flex-1 after:border-t after:border-neutral-300">
-                  <p className="mx-4 mb-0 text-center font-semibold dark:text-neutral-200">
-                    OR
-                  </p>
-                </div>
-=======
                 </Link>
               </div>
-
               {/* <!-- Divider --> */}
               <div className="my-4 flex items-center before:mt-0.5 before:flex-1 before:border-t before:border-neutral-300 after:mt-0.5 after:flex-1 after:border-t after:border-neutral-300">
                 <p className="mx-4 mb-0 text-center font-semibold dark:text-neutral-200">
                   OR
                 </p>
               </div>
->>>>>>> parent of 3415d44 (login and Register (1) commit)
 
               {/* <!-- Social login buttons --> */}
               <div className="w-full">

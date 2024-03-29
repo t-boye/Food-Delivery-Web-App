@@ -1,22 +1,34 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import ClipLoader from "react-spinners/ClipLoader";
 
-import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
-import Login from "./Components/Auth-Components/Login";
-import Registration from "./Components/Auth-Components/Registration";
+import LoginPage from "./Pages/Login";
+import RegistrationPage from "./Pages/Registration";
 import ContactUs from "./Pages/ContactUs";
 import Chat from "./Pages/Chat";
 import DashboardMain from "./Pages/DashboardMain";
+
 function App() {
   const [isLoading, setIsLoading] = useState(false);
+  const [authenticated, setAuthenticated] = useState(false);
+  const [authToken, setAuthToken] = useState(null); // Store auth token
 
   useEffect(() => {
-    // Trigger loading on component mount
+    // Check for existing token in local storage (replace with actual storage mechanism)
+    const storedToken = localStorage.getItem("authToken");
+    if (storedToken) {
+      setAuthToken(storedToken);
+      setAuthenticated(true); // Simulate logged-in state based on token
+    }
     handleLoading();
   }, []);
+
+  useEffect(() => {
+    // Handle token expiration or refresh (implement based on your backend)
+  }, [authToken]);
 
   const handleLoading = async () => {
     setIsLoading(true);
@@ -27,6 +39,36 @@ function App() {
       setIsLoading(false);
     }
   };
+
+  const handleLogin = async (credentials) => {
+    setIsLoading(true);
+    try {
+      const response = await fetch("/api/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(credentials),
+      });
+
+      if (!response.ok) {
+        throw new Error("Login failed");
+      }
+
+      const data = await response.json();
+      setAuthToken(data.token);
+      setAuthenticated(true);
+    } catch (error) {
+      console.error("Login error:", error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const handleLogout = () => {
+    setAuthToken(null);
+    setAuthenticated(false);
+    localStorage.removeItem("authToken"); // Remove token from storage
+  };
+
   return (
     <div className="App">
       {isLoading && (
@@ -42,14 +84,41 @@ function App() {
       )}
       <BrowserRouter>
         <Routes>
-          <Route index element={<Home />} />
-          <Route path="/Home" element={<Home />} />
+          <Route
+            path="/sign-in"
+            element={<LoginPage onLogin={handleLogin} />}
+          />
+          <Route path="/register" element={<RegistrationPage />} />{" "}
+          <Route
+            path="/"
+            element={
+              authenticated ? <Home /> : <Navigate to="/sign-in" replace />
+            }
+          />
+          <Route
+            path="/Home"
+            element={
+              authenticated ? <Home /> : <Navigate to="/sign-in" replace />
+            }
+          />
           <Route path="/About" element={<About />} />
-          <Route path="/sign-in" element={<Login />} />
-          <Route path="/sign-out" element={<Registration />} />
           <Route path="/contactus" element={<ContactUs />} />
-          <Route path="/chat" element={<Chat />} />
-          <Route path="/dashboard" element={<DashboardMain />} />
+          <Route
+            path="/chat"
+            element={
+              authenticated ? <Chat /> : <Navigate to="/sign-in" replace />
+            }
+          />
+          <Route
+            path="/dashboard"
+            element={
+              authenticated ? (
+                <DashboardMain />
+              ) : (
+                <Navigate to="/sign-in" replace />
+              )
+            }
+          />
         </Routes>
       </BrowserRouter>
     </div>
