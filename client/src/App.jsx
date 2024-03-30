@@ -13,62 +13,6 @@ import DashboardMain from "./Pages/DashboardMain";
 
 function App() {
   const [isLoading, setIsLoading] = useState(false);
-  const [authenticated, setAuthenticated] = useState(false);
-  const [authToken, setAuthToken] = useState(null); // Store auth token
-
-  useEffect(() => {
-    // Check for existing token in local storage (replace with actual storage mechanism)
-    const storedToken = localStorage.getItem("authToken");
-    if (storedToken) {
-      setAuthToken(storedToken);
-      setAuthenticated(true); // Simulate logged-in state based on token
-    }
-    handleLoading();
-  }, []);
-
-  useEffect(() => {
-    // Handle token expiration or refresh (implement based on your backend)
-  }, [authToken]);
-
-  const handleLoading = async () => {
-    setIsLoading(true);
-    try {
-      // Simulate loading (replace with your actual asynchronous operations)
-      await new Promise((resolve) => setTimeout(resolve, 3000));
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  const handleLogin = async (credentials) => {
-    setIsLoading(true);
-    try {
-      const response = await fetch("/api/login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(credentials),
-      });
-
-      if (!response.ok) {
-        throw new Error("Login failed");
-      }
-
-      const data = await response.json();
-      setAuthToken(data.token);
-      setAuthenticated(true);
-    } catch (error) {
-      console.error("Login error:", error);
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  const handleLogout = () => {
-    setAuthToken(null);
-    setAuthenticated(false);
-    localStorage.removeItem("authToken"); // Remove token from storage
-  };
-
   return (
     <div className="App">
       {isLoading && (
@@ -84,41 +28,14 @@ function App() {
       )}
       <BrowserRouter>
         <Routes>
-          <Route
-            path="/sign-in"
-            element={<LoginPage onLogin={handleLogin} />}
-          />
-          <Route path="/register" element={<RegistrationPage />} />{" "}
-          <Route
-            path="/"
-            element={
-              authenticated ? <Home /> : <Navigate to="/sign-in" replace />
-            }
-          />
-          <Route
-            path="/Home"
-            element={
-              authenticated ? <Home /> : <Navigate to="/sign-in" replace />
-            }
-          />
+          <Route path="/" element={<RegistrationPage />} />
+          <Route path="/register" element={<RegistrationPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/Home" element={<Home />} />
           <Route path="/About" element={<About />} />
           <Route path="/contactus" element={<ContactUs />} />
-          <Route
-            path="/chat"
-            element={
-              authenticated ? <Chat /> : <Navigate to="/sign-in" replace />
-            }
-          />
-          <Route
-            path="/dashboard"
-            element={
-              authenticated ? (
-                <DashboardMain />
-              ) : (
-                <Navigate to="/sign-in" replace />
-              )
-            }
-          />
+          <Route path="/chat" element={<Chat />} />
+          <Route path="/dashboard" element={<DashboardMain />} />
         </Routes>
       </BrowserRouter>
     </div>

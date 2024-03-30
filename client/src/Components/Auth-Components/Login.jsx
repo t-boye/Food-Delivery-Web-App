@@ -1,46 +1,30 @@
 import React, { useState } from "react";
 import { FaGoogle } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
+  const navigate = useNavigate();
   const [errorMessage, setErrorMessage] = useState("");
 
-  const handleSubmit = async (event) => {
-    event.preventDefault(); // Prevent default form submission behavior
+  const handleSubmit = (event) => {
+    event.preventDefault();
 
-    // Basic email validation (optional, can be extended)
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      setErrorMessage("Please enter a valid email address");
-      return; // Exit if email is invalid
-    }
-
-    if (!password.trim()) {
-      setErrorMessage("Please enter your password");
-      return; // Exit if password is empty
-    }
-
-    try {
-      const response = await fetch("/login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, password }),
-      });
-
-      if (!response.ok) {
-        throw new Error(`Login failed with status: ${response.status}`);
-      }
-
-      const data = await response.json();
-      console.log("Login successful:", data);
-
-      localStorage.setItem("jwtToken", data.token); // Example: Store JWT token in localStorage
-      window.location.href = "/dashboard";
-    } catch (error) {
-      console.error("Login error:", error);
-      setErrorMessage("Login failed. Please check your email and password.");
-    }
+    axios
+      .post("http://localhost:5173/login", { email, password })
+      .then((result) => {
+        console.log(result);
+        if (result.data === "Success") {
+          console.log("Login Success");
+          alert("Login successful!");
+          navigate("/home");
+        } else {
+          alert("Incorrect password! Please try again.");
+        }
+      })
+      .catch((err) => console.log(err));
   };
 
   return (
@@ -70,10 +54,9 @@ export default function Login() {
                 type="email"
                 placeholder=""
                 className="w-full mb-6 outline-none text-xl py-1 px-3 border-l-4 border-t-2 border-r-4 bg-transparent text-white"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={(event) => setEmail(event.target.value)}
+                required
               />
-
               {/* <!--Password input--> */}
               <label htmlFor="Password" className="text-[#818CF8] pb-4">
                 Password:
@@ -82,13 +65,12 @@ export default function Login() {
                 type="password"
                 placeholder=""
                 className="w-full mb-6 outline-none text-xl py-1 px-3 border-l-4 border-t-2 border-r-4 bg-transparent text-white"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                onChange={(event) => setPassword(event.target.value)}
+                required
               />
               {errorMessage && (
                 <p className="text-red-500 text-sm pb-8">{errorMessage}</p>
               )}
-
               {/* <!-- Remember me checkbox --> */}
               <div className="mb-6 flex items-center justify-between">
                 <div className="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]">
@@ -107,7 +89,6 @@ export default function Login() {
                   </label>
                 </div>
               </div>
-
               {/* <!-- Submit button --> */}
               <div className="w-full flex items-center  gap-x-4">
                 <button
@@ -131,7 +112,6 @@ export default function Login() {
                   OR
                 </p>
               </div>
-
               {/* <!-- Social login buttons --> */}
               <div className="w-full">
                 <a

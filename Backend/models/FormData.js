@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const userSchema = new mongoose.Schema({
+const FormDataSchema = new mongoose.Schema({
   username: {
     type: String,
     required: true,
@@ -17,4 +17,6 @@ const userSchema = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model("User", userSchema);
+const FormDataModel = mongoose.model("log_reg_form", FormDataSchema);
+
+module.exports = FormDataModel;

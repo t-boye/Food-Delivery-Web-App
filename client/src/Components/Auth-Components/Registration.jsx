@@ -1,7 +1,61 @@
 import React from "react";
 import { FaGoogle } from "react-icons/fa";
 
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+
 export default function Registration() {
+  const [username, setUserName] = useState();
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
+  const navigate = useNavigate();
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    // Basic validation (optional)
+    if (!username || !email || !password) {
+      setError("Please fill in all required fields!");
+      return;
+    }
+
+    setIsLoading(true); // Set loading state to show loading indicator
+    setError(null); // Clear any previous errors
+
+    try {
+      const response = await axios.post("http://localhost:5173/register", {
+        username,
+        email,
+        password,
+      });
+
+      if (response.status === 201) {
+        alert("Registered successfully! Please Login to proceed.");
+        // Handle successful registration (e.g., navigate to login page)
+      } else {
+        // Handle potential errors based on status code
+        if (response.status === 400) {
+          setError("Email already registered. Please try a different email.");
+        } else {
+          setError(
+            "An error occurred during registration. Please try again later."
+          );
+        }
+      }
+    } catch (error) {
+      console.error("Error submitting registration:", error);
+      setError(
+        "An error occurred during registration. Please try again later."
+      );
+    } finally {
+      setIsLoading(false); // Reset loading state after submission
+    }
+  };
+
   return (
     <section className="pt-4">
       <div className="container h-full px-6 py-24">
@@ -24,6 +78,7 @@ export default function Registration() {
               class="mr-16"
               action="http://localhost:5173/register"
               method="POST"
+              onSubmit={handleSubmit}
             >
               {/* <!-- Name input --> */}
               <div className="coolinput flex flex-col lg:pl-64 items-center justify-center">
@@ -35,6 +90,8 @@ export default function Registration() {
                   name="username"
                   id="username"
                   className="w-full md:w-1/2 lg:w-[550px] lg:ml-16 mb-6 outline-none text-xl py-1 border-l-4 border-t-2 border-r-4 bg-transparent text-white"
+                  onChange={(event) => setUserName(event.target.value)}
+                  required
                 />
               </div>
               {/* <!-- Email input --> */}
@@ -47,6 +104,8 @@ export default function Registration() {
                   name="email"
                   id="email"
                   className="w-full md:w-1/2 lg:w-[550px] lg:ml-16 mb-6 outline-none text-xl py-1 border-l-4 border-t-2 border-r-4 bg-transparent text-white"
+                  onChange={(event) => setEmail(event.target.value)}
+                  required
                 />
               </div>
 
@@ -60,6 +119,8 @@ export default function Registration() {
                   name="password"
                   id="password"
                   className="w-full md:w-1/2 lg:w-[550px] lg:ml-16 mb-6 outline-none text-xl py-1 border-l-4 border-t-2 border-r-4 bg-transparent text-white"
+                  onChange={(event) => setPassword(event.target.value)}
+                  required
                 />
               </div>
 
@@ -77,23 +138,16 @@ export default function Registration() {
                     I accept the terms and conditions
                   </label>
                 </div>
-              </div>
-
-              {/* <!-- Submit button --> */}
-
-              <div className="w-full">
-                <button
-                  type="submit"
-                  className="w-1/2 inline-block rounded bg-primary px-7 pb-2.5 pt-3 text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
-                >
-                  SIGN IN
-                </button>
-                <button
-                  type="submit"
-                  className="w-1/2 inline-block rounded bg-primary px-7 pb-2.5 pt-3 text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
-                >
-                  GET REGISTERED
-                </button>
+                {/* <!-- Submit button --> */}
+                <div className="pl-32 w-full">
+                  <button
+                    type="submit"
+                    disabled={isLoading}
+                    className="my-button w-1/2 inline-block rounded bg-primary px-7 pb-2.5 pt-3 text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+                  >
+                    {isLoading ? "Submitting..." : "Register"}
+                  </button>
+                </div>
               </div>
 
               {/* <!-- Divider --> */}
@@ -136,6 +190,14 @@ export default function Registration() {
                 </a>
               </div>
             </form>
+            <Link to="/login" className="btn btn-secondary">
+              <button
+                type="submit"
+                className="w-1/2 inline-block rounded bg-primary px-7 pb-2.5 pt-3 text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+              >
+                ALREADY HAVE AN ACCOUNT?
+              </button>
+            </Link>
           </div>
         </div>
       </div>
